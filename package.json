@@ -1,0 +1,17 @@
+{
+  "name": "reveille-brew-co",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reveille Brew Co. (Squad 45) bubble tea POS web app",
+  "engines": { "node": ">=20", "npm": ">=10" },
+  "scripts": {
+    "check": "node scripts/check-env.mjs",
+    "check:db": "node scripts/check-env.mjs --db",
+    "setup": "npm --prefix server ci && npm --prefix client ci && npm run check",
+    "migrate": "npm --prefix server run migrate",
+    "test": "npm --prefix server test && npm --prefix client test",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "render-build": "npm --prefix server ci && npm --prefix client ci && npm --prefix client run build"
+  }
+}
