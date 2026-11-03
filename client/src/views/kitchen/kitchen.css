@@ -1,0 +1,22 @@
+/* Kitchen display: dark, high-contrast, glanceable from across the line. */
+.kitchen { min-height: 100vh; background: #141010; color: var(--white); }
+.kitchen__header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 24px; background: var(--maroon); }
+.kitchen__header h1 { margin: 0; font-size: 1.3rem; }
+.kitchen__stats { display: flex; gap: 24px; font-size: 1.1rem; }
+.kitchen__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; padding: 16px 24px; align-items: start; }
+.kitchen__empty { padding: 48px; text-align: center; font-size: 1.5rem; color: #9a8a8d; }
+
+.ticket-card { border-radius: 12px; background: #231b1c; border-top: 10px solid var(--success); overflow: hidden; }
+.ticket-card--warning { border-top-color: #e5a100; }
+.ticket-card--late { border-top-color: #e5483d; }
+.ticket-card__head { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 14px 4px; }
+.ticket-card__number { font-size: 1.8rem; font-weight: 900; }
+.ticket-card__timer { font-size: 1.4rem; font-variant-numeric: tabular-nums; font-weight: 700; }
+.ticket-card--late .ticket-card__timer { color: #ff8a80; }
+.ticket-card__meta { display: flex; gap: 8px; padding: 0 14px 8px; color: #c9b6b9; font-size: 0.9rem; }
+.ticket-card__source { padding: 0 8px; border-radius: 10px; background: #4a393c; text-transform: uppercase; font-size: 0.75rem; font-weight: 700; }
+.ticket-card__items { list-style: none; margin: 0; padding: 0 14px; }
+.ticket-card__item { padding: 8px 0; border-top: 1px solid #3a2d2f; }
+.ticket-card__item-name { font-size: 1.2rem; font-weight: 700; }
+.ticket-card__mods { color: #f0c987; font-size: 0.95rem; }
+.ticket-card__done { width: 100%; min-height: 64px; margin-top: 8px; border: 0; background: var(--success); color: var(--white); font-size: 1.2rem; font-weight: 800; }
