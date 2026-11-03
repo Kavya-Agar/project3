@@ -5,4 +5,5 @@ dist/
 build/
 .DS_Store
 .vscode/
-server/certs/
+server/certs/*
+!server/certs/tamu-ca.pem
