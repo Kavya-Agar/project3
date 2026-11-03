@@ -77,7 +77,7 @@ export async function createOrder(client, { items, employeeId, source }) {
   const usage = await calculateInventoryUse(client, lines);
   for (const [itemId, amount] of usage) {
     await client.query(
-      'UPDATE inventory SET quantity_on_hand = GREATEST(quantity_on_hand - $2, 0) WHERE item_id = $1',
+      'UPDATE inventory SET quantity_on_hand = GREATEST(quantity_on_hand - $2::numeric, 0) WHERE item_id = $1',
       [itemId, amount],
     );
   }
